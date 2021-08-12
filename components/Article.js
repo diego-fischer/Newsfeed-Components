@@ -1,3 +1,6 @@
+import articleMaker from './articleMaker';
+
+
 // This is the data we will be using to create our articles. Look at it, then proceed to line 93.
 // OPTIONAL: if you're feeling adventurous, try to make this data an export from a different module, and import it here.
 // You can read about ES6 modules here: https://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules
@@ -86,8 +89,21 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+	{
+    title: 'New Article for Test Purposes',
+    date: 'Sep 10th, 2015',
+    firstParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae corrupti placeat rerum inventore, debitis labore hic mollitia nam necessitatibus voluptatem illo impedit eligendi eum, quaerat aspernatur incidunt eveniet doloribus?`,
+    secondParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ipsa necessitatibus eligendi veritatis error corrupti est voluptates cum repudiandae laudantium suscipit tempora quae laborum unde, aliquam ipsam! Provident, neque eveniet.`,
+    thirdParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quos libero qui iste. Temporibus vitae cupiditate, explicabo nihil odit dolores animi quam consequuntur dolore. Deserunt, perferendis inventore? Quibusdam, voluptas voluptatum.`
   }
 ];
+
+data.forEach (article => {
+	document.querySelector('div.articles').appendChild(articleMaker(article))
+})
+
+
 
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
