@@ -11,8 +11,9 @@ export default function menuMaker(menuItems){
 		ul.appendChild(li)
 	})
 
+
 	document.querySelector('img.menu-button').addEventListener('click', ()=>{
-		
+		console.log('MENU', menu)
 		menu.classList.toggle('menu--open')
 		
 	})

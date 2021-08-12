@@ -12,7 +12,7 @@ let menuItems = [
 ];
 
 
-menuMaker(menuItems);
+document.querySelector('div.header').appendChild(menuMaker(menuItems))
 
 
 /* 
